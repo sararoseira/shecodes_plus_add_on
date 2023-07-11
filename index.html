@@ -11,13 +11,38 @@
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <label for="countries">Which country are you curious for?</label>
-    <select name="countries" id="countries">
-      <option value="">Select a City</option>
-      <option value="Europe/Paris">Paris 🇫🇷</option>
-      <option value="Australia/Sydney">Sydney 🇦🇺</option>
-      <option value="Asia/Tokyo">Tokyo 🇯🇵</option>
-    </select>
+    <div class="container">
+      <h1>World Clock</h1>
+
+      <select name="countries" id="countries">
+        <option value="">Select a city...</option>
+        <option value="current">Current location</option>
+        <option value="Europe/Madrid">Madrid 🇪🇸</option>
+        <option value="Europe/Rome">Rome 🇮🇹</option>
+        <option value="Asia/Tokyo">Tokyo 🇯🇵</option>
+      </select>
+
+      <div class="cities">
+        <div id="lisbon" class="city">
+          <h2>Lisbon</h2>
+        </div>
+        <div id="sydney" class="city">
+          <h2>Sydney</h2>
+        </div>
+        <div id="paris" class="city">
+          <h2>Paris</h2>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <h3>
+        Coded by ZooeyBechamel⏱️ and
+        <a href="https://github.com/sararoseira/shecodes_plus_add_on.git">
+          open sourced on Github</a
+        >
+      </h3>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>
