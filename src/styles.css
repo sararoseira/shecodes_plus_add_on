@@ -9,6 +9,9 @@ h2 {
   font-size: 28px;
 }
 
+#back a:visited {
+  color: pink;
+}
 .container {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.948);

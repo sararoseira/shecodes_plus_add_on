@@ -50,10 +50,17 @@ const updateTZ = function (timezone) {
       .tz(timezone)
       .format("H:mm:ss [<small>]A[</small>]");
 
+    let currentDate = moment().tz(timezone).format("MMMM	Do YYYY");
+
     newCity.innerHTML = `
       <div id="madrid" class="city">
-        <h2>Madrid</h2><h2>${currentTime}</h2>
-      </div>`;
+      <div>
+      <h2>Madrid</h2>
+       <div class="date">${currentDate}</div>
+      </div>
+        <h2>${currentTime}</h2>
+      </div>
+      <a href="/">Back</a>`;
     return;
   }
   if (timezone === "Europe/Rome") {
@@ -61,10 +68,17 @@ const updateTZ = function (timezone) {
       .tz(timezone)
       .format("H:mm:ss [<small>]A[</small>]");
 
+    let currentDate = moment().tz(timezone).format("MMMM	Do YYYY");
+
     newCity.innerHTML = `
       <div id="rome" class="city">
-        <h2>Rome</h2><h2>${currentTime}</h2>
-      </div>`;
+      <div>
+      <h2>Rome</h2>
+       <div class="date">${currentDate}</div>
+      </div>
+        <h2>${currentTime}</h2>
+      </div>
+      <a href="/">Back</a>`;
     return;
   }
 
@@ -73,10 +87,17 @@ const updateTZ = function (timezone) {
       .tz(timezone)
       .format("H:mm:ss [<small>]A[</small>]");
 
+    let currentDate = moment().tz(timezone).format("MMMM	Do YYYY");
+
     newCity.innerHTML = `
       <div id="tokyo" class="city">
-        <h2>Tokyo</h2><h2>${currentTime}</h2>
-      </div>`;
+      <div>
+      <h2>Tokyo</h2>
+       <div class="date">${currentDate}</div>
+      </div>
+        <h2>${currentTime}</h2>
+      </div>
+      <a href="/">Back</a>`;
     return;
   }
   let currentTimeZone = moment.tz.guess();
@@ -85,11 +106,19 @@ const updateTZ = function (timezone) {
   let currentTime = moment()
     .tz(currentTimeZone)
     .format("H:mm:ss [<small>]A[</small>]");
+  let currentDate = moment().tz(currentTimeZone).format("MMMM	Do YYYY");
   console.log(currentTime);
   newCity.innerHTML = `
       <div id=${cityName} class="city">
-        <h2>${cityName}</h2><h2>${currentTime}</h2>
-      </div>`;
+      <div>
+      <h2>${cityName}</h2>
+      <div class="date">${currentDate}</div>
+      </div>
+      <div>
+       <h2>${currentTime}</h2>
+      </div>
+
+      </div><a href="/">Back</a>`;
 };
 let intervalId;
 
