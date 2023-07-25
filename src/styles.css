@@ -56,4 +56,8 @@ select {
 footer {
   text-align: center;
   font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-right: 143px;
+  margin-left: 143px;
+  border-radius: 3px;
 }
