@@ -77,6 +77,7 @@ const updateTZ = function (timezone) {
         <h2>${cityName}</h2><h2>${currentTime}</h2>
       </div>`;
 };
+let intervalId;
 
 const showTimeZone = function (event) {
   console.log(event);
@@ -84,8 +85,11 @@ const showTimeZone = function (event) {
   console.log(`"${event.target.value}"`);
   const timezone = event.target.value;
   if (timezone) {
+    if (intervalId) {
+      clearInterval(intervalId);
+    }
     updateTZ(timezone);
-    setInterval(() => updateTZ(timezone), 1000);
+    intervalId = setInterval(() => updateTZ(timezone), 1000);
   }
 };
 
