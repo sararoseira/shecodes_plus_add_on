@@ -1,17 +1,25 @@
+body {
+  /* background-image: url(../image/alice_in_wonderland_rabbit.jpeg);
+  background-size: 500px; */
+  background: url(../image/ezgif.com-webp-to-jpg.jpg);
+}
+
 .container {
   text-align: center;
-  background-color: aqua;
+  background-color: rgba(255, 255, 255, 0.948);
   margin: 60px auto;
   max-width: 600px;
   border-radius: 5px;
+  padding: 30px;
 }
 
 select {
   display: block;
   width: 100%;
-  text-align: center;
+  text-align: left;
   padding: 10px;
   font-size: 16px;
+  border-radius: 10px;
 }
 
 .city {
