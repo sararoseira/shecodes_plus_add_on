@@ -4,6 +4,11 @@ body {
   background: url(../image/ezgif.com-webp-to-jpg.jpg);
 }
 
+h2 {
+  margin: 0 0 5px;
+  font-size: 28px;
+}
+
 .container {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.948);
@@ -32,6 +37,17 @@ select {
 
 .city:last-child {
   border: none;
+}
+
+.time {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.time small {
+  font-size: 24px;
+  vertical-align: middle;
+  line-height: 48px;
 }
 
 footer {

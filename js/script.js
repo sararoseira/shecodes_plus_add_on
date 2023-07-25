@@ -14,19 +14,25 @@ let cities = document.querySelector(".cities");
 
 const updateTime = function () {
   // Lisbon
-  let lisbonTime = moment().tz("Europe/Lisbon").format("H:m:ss A");
+  let lisbonTime = moment()
+    .tz("Europe/Lisbon")
+    .format("H:mm:ss [<small>]A[</small>]");
   let lisbonDate = moment().tz("Europe/Lisbon").format("MMMM Do YYYY");
   dateLis.innerHTML = lisbonDate;
   timeLis.innerHTML = lisbonTime;
 
   // Sydney
-  let sydneyTime = moment().tz("Australia/Sydney").format("H:m:ss A");
+  let sydneyTime = moment()
+    .tz("Australia/Sydney")
+    .format("H:mm:ss [<small>]A[</small>]");
   let sydneyDate = moment().tz("Australia/Sydney").format("MMMM Do YYYY");
   dateSyd.innerHTML = sydneyDate;
   timeSyd.innerHTML = sydneyTime;
 
   // Paris
-  let parisTime = moment().tz("Europe/Paris").format("H:m:ss A");
+  let parisTime = moment()
+    .tz("Europe/Paris")
+    .format("H:mm:ss [<small>]A[</small>]");
   let parisDate = moment().tz("Europe/Paris").format("MMMM Do YYYY");
   dateParis.innerHTML = parisDate;
   timeParis.innerHTML = parisTime;
@@ -40,7 +46,9 @@ let newCity = document.querySelector(".cities");
 
 const updateTZ = function (timezone) {
   if (timezone === "Europe/Madrid") {
-    let currentTime = moment().tz(timezone).format("H:m:ss A");
+    let currentTime = moment()
+      .tz(timezone)
+      .format("H:mm:ss [<small>]A[</small>]");
 
     newCity.innerHTML = `
       <div id="madrid" class="city">
@@ -49,7 +57,9 @@ const updateTZ = function (timezone) {
     return;
   }
   if (timezone === "Europe/Rome") {
-    let currentTime = moment().tz(timezone).format("H:m:ss A");
+    let currentTime = moment()
+      .tz(timezone)
+      .format("H:mm:ss [<small>]A[</small>]");
 
     newCity.innerHTML = `
       <div id="rome" class="city">
@@ -59,7 +69,9 @@ const updateTZ = function (timezone) {
   }
 
   if (timezone === "Asia/Tokyo") {
-    let currentTime = moment().tz(timezone).format("H:m:ss A");
+    let currentTime = moment()
+      .tz(timezone)
+      .format("H:mm:ss [<small>]A[</small>]");
 
     newCity.innerHTML = `
       <div id="tokyo" class="city">
@@ -70,7 +82,9 @@ const updateTZ = function (timezone) {
   let currentTimeZone = moment.tz.guess();
   console.log(currentTimeZone);
   let cityName = currentTimeZone.replace("_", " ").split("/")[1];
-  let currentTime = moment().tz(currentTimeZone).format("H:m:ss A");
+  let currentTime = moment()
+    .tz(currentTimeZone)
+    .format("H:mm:ss [<small>]A[</small>]");
   console.log(currentTime);
   newCity.innerHTML = `
       <div id=${cityName} class="city">
